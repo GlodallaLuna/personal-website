@@ -1,0 +1,28 @@
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    font-size: 100%;  
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    letter-spacing: .5px;
+    overflow-x: hidden;
+    font-family: var(--public-sans-font);
+    color: var(--clr-black-primary);
+}
+
+a {
+    color: var(--clr-black-primary);
+}
+
+
+img {
+    width: 100%;
+    display: block;
+}
+

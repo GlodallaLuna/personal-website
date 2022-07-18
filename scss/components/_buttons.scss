@@ -1,0 +1,65 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.button-container {
+    margin: 2.5rem 1rem;
+}
+
+.button {
+    margin: 0 1.5rem;
+    padding: .5rem 1.1rem; 
+    
+    border-radius: 20px;
+
+    &--about {
+        color: var(--clr-black-primary);
+        background-color: var(--clr-lilac-dark);
+    }
+}
+
+.button--about:hover {
+    background-color: hsl(254, 78%, 75%);
+    color: var(--clr-white-primary);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+
+.buttons-container {
+    gap: 1rem;
+    justify-content: flex-end;
+    text-transform: uppercase;
+    margin: 1rem 2.5rem;
+
+    &--modified {
+        
+        @include u.breakpoint(large) {
+            justify-content: flex-start;
+            margin: 1rem 0 0 3rem;
+        }
+
+    
+    }
+}
+
+.button--projects {
+    border: 1px solid var(--clr-black-primary);
+    padding: .5rem 1rem;
+    border-radius: 5px;
+    font-size: .9rem;
+
+    @include u.breakpoint(medium) {
+        font-size: 1rem;
+    }
+
+    &--modified {
+        border: 1px solid var(--clr-white-primary);
+        background-color: var(--clr-white-primary);
+    }
+}
+
+.button--projects:hover {
+    color: var(--clr-white-primary);
+    border: 1px solid var(--clr-black-primary);
+    background-color: var(--clr-black-primary);
+}

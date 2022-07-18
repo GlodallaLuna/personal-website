@@ -1,0 +1,40 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.about {
+    position: relative;
+    
+}
+
+/*styles for the waves*/
+.custom-shape-divider-bottom-1655993251 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    
+  }
+  
+  .custom-shape-divider-bottom-1655993251 svg {
+    position: relative;
+    display: block;
+    width: calc(129% + 1.3px);
+    height: 41px;
+
+    @include u.breakpoint-down(medium) {
+        width: calc(171% + 1.3px);
+        height: 61px;
+    }
+    }
+    
+  
+  
+  .custom-shape-divider-bottom-1655993251 .shape-fill {
+    fill: var(--clr-green-bg);
+  }
+  
+ 
+  
