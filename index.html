@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Gloria Mancini</title>
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -132,13 +132,14 @@
                 </div>
         
                 <div class="box">
-                  <i class="box__icon devicon-bash-plain"></i>
-                  <p class="box__label">Bash</p>
+                  <!--icon from https://www.svgrepo.com-->
+                  <img class="box__img" src="/images/terminal-svgrepo-com.svg" alt="icon of tablet and phone devices">
+                  <p class="box__label">Terminal</p>
                 </div>
         
                 <div class="box">
-                  <i class="box__icon devicon-linux-plain"></i>
-                  <p class="box__label">Linux</p>
+                  <i class="box__icon devicon-firebase-plain"></i>
+                  <p class="box__label">Firebase</p>
                 </div>
         
             
@@ -202,7 +203,7 @@
 
             <div class="buttons-container flex">
               <div><a class="button--projects" href="#">GitHub</a></div>
-              <div><a class="button--projects" href="#">Live site</a></div>       
+              <div><a class="button--projects" href="https://trivia-quiz-game-7f6ef.web.app" target="_blank">Live site</a></div>       
             </div>
 
           </div>
@@ -233,7 +234,7 @@
 
             <div class="buttons-container buttons-container--modified flex">
               <div><a class="button--projects" href="#">GitHub</a></div>
-              <div><a class="button--projects" href="#">Live site</a></div>       
+              <div><a class="button--projects" href="https://hiragana-flashcard-app.web.app" target="_blank">Live site</a></div>       
             </div>
 
           </div>
@@ -285,6 +286,33 @@
           </div>
         </div>
         
+      </section>
+
+      <section class="section contact" id="contact">
+        <div class="wrapper">
+          <h2 class="section__title">Get in Touch<span class="full-stop">.</span></h2>
+          <p class="section__text">If you have any questions, you would love to build something together or just want to say hi, 
+             my inbox is open. Thanks for stopping by! </p>
+
+             <div class="flex flex--contact">
+               <div class="contact__container">
+                  <form class="contact__form" action="https://formsubmit.co/glorialmphoto@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New email!">
+                    <input type="text" name="name" placeholder="name" required>
+                    <input type="email" name="email" placeholder="Email address">
+                    <!-- <input type="text" name="name" placeholder="write your message here" required> -->
+                    <textarea name="message" type="textbox" id="message" placeholder="Write here your message" required></textarea>
+               
+                    <div class="button-container--contact"><button class="button button--contact" type="submit">Send</button></div>
+               </form>
+               </div>
+             </div>
+        </div>  
+
+      </section>
+
+      
+
       </section>
 </body>
 

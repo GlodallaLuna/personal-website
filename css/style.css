@@ -3,9 +3,11 @@
   --clr-white-primary: hsl(0, 0%, 100%);
   --clr-lilac-bg: hsl(255, 69%, 90%);
   --clr-lilac-dark: hsl(254, 100%, 89%);
+  --clr-lilac-dark-button: hsl(254, 78%, 75%);
   --clr-lilac-dark-blur: hsl(255, 100%, 88%, .9);
   --clr-green-bg: hsl(151, 74%, 88%);
-  --clr-pink-bg: hsl(0, 77%, 85%);
+  --clr-pink-bg: hsl(0, 86%, 89%);
+  --clr-pink-dark-button: hsl(0, 73%, 77%);
   --clr-blue-bg: hsl(215, 94%, 86%);
   --clr-blue-dark: hsl(215, 68%, 41%);
 }
@@ -111,19 +113,37 @@ ul {
 .button-container {
   margin: 2.5rem 1rem;
 }
+.button-container--contact {
+  text-align: end;
+}
 
 .button {
   margin: 0 1.5rem;
   padding: 0.5rem 1.1rem;
+  outline: none;
+  border: none;
   border-radius: 20px;
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
 }
 .button--about {
   color: var(--clr-black-primary);
   background-color: var(--clr-lilac-dark);
 }
+.button--contact {
+  color: var(--clr-black-primary);
+  background-color: var(--clr-pink-bg);
+  padding: 0.5rem 2rem;
+}
 
 .button--about:hover {
-  background-color: hsl(254deg, 78%, 75%);
+  background-color: var(--clr-lilac-dark-button);
+  color: var(--clr-white-primary);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.button--contact:hover {
+  background-color: var(--clr-pink-dark-button);
   color: var(--clr-white-primary);
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
@@ -523,6 +543,69 @@ ul {
     padding: 0;
     margin: 1.5rem 0 0 1.5rem;
   }
+}
+
+.contact {
+  background-color: var(--clr-pink-bg);
+  padding-bottom: 5rem;
+}
+@media (min-width: 87.5em) {
+  .contact {
+    background-image: url(../../images/env2.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-bottom: 6.5rem;
+  }
+}
+.contact__container {
+  background-color: var(--clr-white-primary);
+  padding: 2.5rem 2rem;
+  margin: 2rem 2.5rem;
+  width: 100%;
+  border-radius: 5px;
+}
+@media (min-width: 37em) {
+  .contact__container {
+    margin: 3.5rem 3rem;
+    padding: 2.5rem 3rem;
+    max-width: 75%;
+  }
+}
+@media (min-width: 87.5em) {
+  .contact__container {
+    padding: 2.5rem 3rem;
+    margin: 11.5rem 2rem;
+  }
+}
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact__form > input,
+textarea {
+  font-family: var(--public-sans-font);
+  font-size: 1rem;
+  border: none;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 1rem 0.7rem;
+}
+
+.contact__form > textarea {
+  height: 150px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1.5px solid var(--clr-pink-dark-button);
+}
+
+.flex--contact {
+  justify-content: center;
+  align-items: center;
 }
 
 /*# sourceMappingURL=style.css.map */

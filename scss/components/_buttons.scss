@@ -3,22 +3,41 @@
 
 .button-container {
     margin: 2.5rem 1rem;
+
+    &--contact {
+        text-align: end;
+    }
 }
 
 .button {
     margin: 0 1.5rem;
     padding: .5rem 1.1rem; 
-    
+    outline: none;
+    border: none;
     border-radius: 20px;
+    font-size: 1rem;
+    letter-spacing: .08rem;
 
     &--about {
         color: var(--clr-black-primary);
         background-color: var(--clr-lilac-dark);
     }
+
+    &--contact {
+        color: var(--clr-black-primary);
+        background-color: var(--clr-pink-bg);
+        padding: .5rem 2rem;
+    }
 }
 
 .button--about:hover {
-    background-color: hsl(254, 78%, 75%);
+    background-color: var(--clr-lilac-dark-button);
+    color: var(--clr-white-primary);
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.button--contact:hover {
+    background-color: var(--clr-pink-dark-button);
     color: var(--clr-white-primary);
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
