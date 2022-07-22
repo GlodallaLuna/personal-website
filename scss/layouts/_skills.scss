@@ -33,7 +33,6 @@ max-width: 28rem;
     text-align: center;
 
     @include u.breakpoint(large) {
-        text-align: start;
         margin: 0 1.5rem;
         
     }
@@ -42,16 +41,16 @@ max-width: 28rem;
         /* font-size: 4.5rem;*/
         font-size: 3rem;
 
-        @include u.breakpoint(large) {
+        @include u.breakpoint(medium) {
             font-size: 4rem;
             
         }
     }
 
     &__label {
-        font-family: arial;
-        font-size: .8rem;
-        font-weight: bold;
+        font-family: var(--public-sans-font);
+        font-size: .9rem;
+        
         letter-spacing: .0565rem;
         margin: 0 5px;
     }
@@ -62,9 +61,11 @@ max-width: 28rem;
 
         @include u.breakpoint(large) {
             max-width: 4rem;
-            margin: 0;
+            margin: 0 auto;
         }
     }
+
+    
 
 }
 

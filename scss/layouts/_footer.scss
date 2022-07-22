@@ -1,0 +1,29 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.footer {
+    background-color: var(--clr-lilac-dark);
+    padding: .5rem;
+
+    &__text {
+        font-family: var(--public-sans-font);
+        text-align: center;
+        padding: .3rem 1rem;
+    }
+}
+
+.socials {
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+
+    &__link {
+        color: var(--clr-black-primary);
+        font-size: 2rem;
+        padding: 1.3rem 1rem;
+
+    }
+
+    &__link:hover {
+        color: var(--clr-white-primary);
+    }
+}

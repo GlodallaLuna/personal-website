@@ -2,15 +2,26 @@
 @use '../globals' as g;
 @use '../components' as c;
 
+.wrapper--contact {
+    @include u.breakpoint(xlarge) {
+        background-image: url(../../images/env2bis.svg);
+        background-repeat: no-repeat;
+        background-position: center ;
+        padding-bottom: 0;
+        /*padding-bottom: 6.5rem;*/
+    
+    }
+
+}
+
 .contact {
     background-color: var( --clr-pink-bg);
     padding-bottom: 5rem;
 
     @include u.breakpoint(xlarge) {
-        background-image: url(../../images/env2.svg);
-        background-repeat: no-repeat;
-        background-position: center;
-        padding-bottom: 6.5rem;
+      
+        padding-bottom: 0;
+        /*padding-bottom: 6.5rem;*/
     
     }
     
