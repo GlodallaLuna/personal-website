@@ -125,6 +125,7 @@ ul {
   border-radius: 20px;
   font-size: 1rem;
   letter-spacing: 0.08rem;
+  transition: 0.2s ease-in-out 0s;
 }
 .button--about {
   color: var(--clr-black-primary);
@@ -136,16 +137,17 @@ ul {
   padding: 0.5rem 2rem;
 }
 
+.button--about:hover,
+.button--contact:hover {
+  color: var(--clr-white-primary);
+}
+
 .button--about:hover {
   background-color: var(--clr-lilac-dark-button);
-  color: var(--clr-white-primary);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .button--contact:hover {
   background-color: var(--clr-pink-dark-button);
-  color: var(--clr-white-primary);
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .buttons-container {
@@ -166,6 +168,7 @@ ul {
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.9rem;
+  position: relative;
 }
 @media (min-width: 37em) {
   .button--projects {

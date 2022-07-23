@@ -17,10 +17,12 @@
     border-radius: 20px;
     font-size: 1rem;
     letter-spacing: .08rem;
+    transition: .2s ease-in-out 0s;
 
     &--about {
         color: var(--clr-black-primary);
         background-color: var(--clr-lilac-dark);
+        
     }
 
     &--contact {
@@ -30,16 +32,18 @@
     }
 }
 
+.button--about:hover,
+.button--contact:hover {
+    color: var(--clr-white-primary);
+    
+}
+
 .button--about:hover {
     background-color: var(--clr-lilac-dark-button);
-    color: var(--clr-white-primary);
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 .button--contact:hover {
     background-color: var(--clr-pink-dark-button);
-    color: var(--clr-white-primary);
-    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 }
 
 
@@ -66,6 +70,7 @@
     padding: .5rem 1rem;
     border-radius: 5px;
     font-size: .9rem;
+    position: relative;
 
     @include u.breakpoint(medium) {
         font-size: 1rem;
@@ -77,8 +82,14 @@
     }
 }
 
+
+
+
+
+
 .button--projects:hover {
     color: var(--clr-white-primary);
     border: 1px solid var(--clr-black-primary);
     background-color: var(--clr-black-primary);
+    
 }
