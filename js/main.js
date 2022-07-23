@@ -3,6 +3,7 @@ const navToggle = document.querySelector('.mobile-nav-toggle');
 const navLinks = document.querySelectorAll('.primary-nav__link');
 
 
+
 const gitHubIcon = document.querySelector('github-icon');
 const externalLinkIcon = document.querySelector('external-link-icon')
 

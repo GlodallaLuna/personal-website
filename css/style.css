@@ -118,6 +118,7 @@ ul {
 }
 
 .button {
+  color: var(--clr-black-primary);
   margin: 0 1.5rem;
   padding: 0.5rem 1.1rem;
   outline: none;
@@ -138,8 +139,10 @@ ul {
 }
 
 .button--about:hover,
-.button--contact:hover {
+.button--contact:hover,
+.button--projects:hover {
   color: var(--clr-white-primary);
+  transform: scale(1.05) translateY(-0.125em);
 }
 
 .button--about:hover {
@@ -164,11 +167,15 @@ ul {
 }
 
 .button--projects {
+  text-transform: uppercase;
+  letter-spacing: 1px;
   border: 1px solid var(--clr-black-primary);
+  background-color: var(--clr-blue-bg);
   padding: 0.5rem 1rem;
   border-radius: 5px;
   font-size: 0.9rem;
   position: relative;
+  transition: 0.2s ease-in-out 0s;
 }
 @media (min-width: 37em) {
   .button--projects {
@@ -181,7 +188,6 @@ ul {
 }
 
 .button--projects:hover {
-  color: var(--clr-white-primary);
   border: 1px solid var(--clr-black-primary);
   background-color: var(--clr-black-primary);
 }
