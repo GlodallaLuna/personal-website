@@ -31,6 +31,7 @@
     gap: 3rem;
     font-size: 1.2rem;
     
+    
 
     @include u.breakpoint-down(small) {
         z-index: 1000;
@@ -48,7 +49,6 @@
 
 
 
-
 .primary-nav[data-visible="true"] {
     @include u.breakpoint-down(small) {
         transform: translateX(0%);
@@ -56,8 +56,30 @@
     }
 }
 
+.primary-nav__link {
+    position: relative;
+}
+
 .primary-nav__link:hover {
     color: var(--clr-white-primary);
+}
+
+.primary-nav__link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 100%;
+    left: 0;
+    height: 2px;
+    background: var(--clr-white-primary);
+
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.25s ease-in-out;
+}
+
+.primary-nav__link:hover::after {
+    transform: scaleX(1)
 }
 
 .mobile-nav-toggle {
