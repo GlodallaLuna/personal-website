@@ -79,7 +79,9 @@
 }
 
 .primary-nav__link:hover::after {
+    @include u.breakpoint(large) {
     transform: scaleX(1)
+    }
 }
 
 .mobile-nav-toggle {

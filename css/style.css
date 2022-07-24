@@ -329,8 +329,10 @@ ul {
   transition: transform 0.25s ease-in-out;
 }
 
-.primary-nav__link:hover::after {
-  transform: scaleX(1);
+@media (min-width: 48em) {
+  .primary-nav__link:hover::after {
+    transform: scaleX(1);
+  }
 }
 
 .mobile-nav-toggle {
