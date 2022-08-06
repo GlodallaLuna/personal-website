@@ -17,7 +17,7 @@
     &__text {
         max-width: 65ch;
         font-size: 1.2rem;
-        padding: .2rem 2.5rem;
+        padding: .2rem 2.2rem;
         margin: 1rem 0;
 
     }
@@ -45,7 +45,7 @@
         font-family: var(--public-sans-font);
         font-weight: bold;
         font-size: 1.7rem;
-        padding: 0 2.5rem;
+        padding: 0 2.2rem;
 
         @include u.breakpoint(large) {
         margin-bottom: 0;
@@ -67,6 +67,7 @@
     &__text-wrapper {
         @include u.breakpoint(large) {
             grid-area: text;
+            margin-top: 1.6rem;
         }
         
     }
@@ -79,6 +80,8 @@
         }
 
     }
+
+    
 
 
 
@@ -99,10 +102,13 @@
     }
 
     &__name {
-        color: var(--clr-blue-dark)
+        color: var(--clr-blue-dark);
     }
 
-    
+    &__name:hover {
+        border-bottom: 1px solid var(--clr-blue-dark);
+    }
+
 
    
 }
@@ -110,13 +116,17 @@
 .wrapper--projects {
     max-width: 73rem;
     margin-bottom: 6rem;
+
+    &-row {
+        margin-bottom: 3rem;
+    }
 }
 
 .grid__block {
     position: relative;
     isolation: isolate;
     @include u.breakpoint(large) {
-        margin-top: 5rem;
+        margin-top: 4.2rem;
         grid-template-areas: "image image image image text"  
                              "image image image image icons";
         
@@ -158,7 +168,7 @@
 .projects-wrapper--modified {
     @include u.breakpoint(large) {
         padding: 0;
-        margin: 1.5rem 0 0 1.5rem ;
+        margin: 2.5rem 0 0 1.5rem ;
         
     }
 }

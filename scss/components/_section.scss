@@ -9,7 +9,7 @@
         line-height: 2.3rem;
         margin-bottom: 2rem;
         font-family: var(--vollkron-font);
-        padding: 0 2.5rem;
+        padding: 0 2.2rem;
         
 
         @include u.breakpoint(medium) {
@@ -22,7 +22,7 @@
     &__text {
         max-width: 65ch;
         font-size: 1.1rem;
-        padding: .2rem 2.5rem;
+        padding: .2rem 2.2rem;
         margin: 1rem 0;
 
         @include u.breakpoint(medium) {
