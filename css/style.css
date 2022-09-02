@@ -118,8 +118,7 @@ ul {
   text-align: end;
 }
 
-.button,
-.button:focus {
+.button {
   color: var(--clr-black-primary);
   margin: 0 1.5rem;
   padding: 0.5rem 1.1rem;
@@ -130,13 +129,11 @@ ul {
   letter-spacing: 0.08rem;
   transition: 0.2s ease-in-out 0s;
 }
-.button--about,
-.button:focus--about {
+.button--about {
   color: var(--clr-black-primary);
   background-color: var(--clr-lilac-dark);
 }
-.button--contact,
-.button:focus--contact {
+.button--contact {
   color: var(--clr-black-primary);
   background-color: var(--clr-pink-bg);
   padding: 0.5rem 2rem;

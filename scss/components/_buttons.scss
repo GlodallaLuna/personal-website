@@ -9,8 +9,7 @@
     }
 }
 
-.button,
-.button:focus {
+.button {
     color: var(--clr-black-primary);;
     margin: 0 1.5rem;
     padding: .5rem 1.1rem; 
@@ -24,7 +23,6 @@
     &--about {
         color: var(--clr-black-primary);
         background-color: var(--clr-lilac-dark);
-        
     }
 
     &--contact {
