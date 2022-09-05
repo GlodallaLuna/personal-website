@@ -24,7 +24,25 @@
         @include u.breakpoint(medium) {
             font-size: 4rem;
         }
+
+        @include u.breakpoint-down-height(medium) {
+            margin-top: 2.5rem;
+            font-size: 3.2rem;
+        }    
     }
+
+    &__name {
+            font-weight: 600;
+            font-size: 2.7rem;
+            
+            @include u.breakpoint(medium) {
+                font-size: 4.2rem;
+            }
+
+            @include u.breakpoint-down-height(medium) {
+                font-size: 3.4rem;
+            }  
+        }
 
     &__paragraph {
         margin-top: 10px;
@@ -43,12 +61,12 @@
         margin-top: 9rem;
         display: inline-block;
     
-        
-        
-        
-
         @include u.breakpoint(medium) {
             display: none;
+        }
+
+        @include u.breakpoint-down-height(medium) {
+            display: block;
         }
     }
 }
@@ -60,7 +78,11 @@
     align-items: center;
     left: 0;
     right: 0;
-    margin-top: 20rem;
+    margin-top: 19rem;
+
+    // @include u.breakpoint-down-height(medium) {
+    //     margin-top: 18.5rem;
+    // }
     
 }
 
@@ -73,19 +95,24 @@
 .scroll-icon {
     max-width: 1.3rem;
     margin: 0 auto;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     opacity: .8;
-}
 
-
-.header__name {
-    font-weight: 600;
-    font-size: 2.7rem;
-
-    @include u.breakpoint(medium) {
-        font-size: 4.2rem;
+    @include u.breakpoint-down-height(medium) {
+        margin-top: .3rem;
+        
     }
 }
+
+
+// .header__name {
+//     font-weight: 600;
+//     font-size: 2.7rem;
+
+//     @include u.breakpoint(medium) {
+//         font-size: 4.2rem;
+//     }
+// }
 
 .full-stop {
     opacity: 65%;
