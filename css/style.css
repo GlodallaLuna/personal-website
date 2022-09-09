@@ -211,7 +211,7 @@ ul {
   line-height: 1.2;
   padding: 0 15px 0 15px;
 }
-@media (min-width: 37em) {
+@media (min-width: 48em) {
   .header__title {
     font-size: 4rem;
   }
@@ -226,7 +226,7 @@ ul {
   font-weight: 600;
   font-size: 2.7rem;
 }
-@media (min-width: 37em) {
+@media (min-width: 48em) {
   .header__name {
     font-size: 4.2rem;
   }
@@ -307,8 +307,8 @@ ul {
   inset: 20% 0 0 29%;
   margin-top: -30px;
   margin-left: -100px;
-  color: var(--clr-black-primary);
   padding: 1.3rem;
+  color: var(--clr-black-primary);
 }
 @media (min-width: 87.5em) {
   .centered {
