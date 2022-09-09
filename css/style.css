@@ -333,7 +333,7 @@ ul {
   background-color: var(--clr-lilac-dark-blur);
   position: fixed;
 }
-@media (max-width: 37.9375em) {
+@media (max-width: 48.9375em) {
   .nav-wrapper {
     padding: 2.1rem 3rem;
   }
@@ -343,7 +343,7 @@ ul {
   gap: 3rem;
   font-size: 1.2rem;
 }
-@media (max-width: 37.9375em) {
+@media (max-width: 48.9375em) {
   .primary-nav {
     z-index: 1000;
     position: fixed;
@@ -355,7 +355,7 @@ ul {
   }
 }
 
-@media (max-width: 37.9375em) {
+@media (max-width: 48.9375em) {
   .primary-nav[data-visible=true] {
     transform: translateX(0%);
     transition: transform 120ms ease-out;
@@ -393,7 +393,7 @@ ul {
   display: none;
 }
 
-@media (max-width: 37.9375em) {
+@media (max-width: 48.9375em) {
   .mobile-nav-toggle {
     display: block;
     position: fixed;
@@ -413,6 +413,11 @@ ul {
   .mobile-nav-toggle[aria-expanded=true] {
     background-image: url(../../images/icons8-black-close32.svg);
   }
+}
+
+.external {
+  text-transform: uppercase;
+  font-family: "Asap Condensed", sans-serif;
 }
 
 .about {
