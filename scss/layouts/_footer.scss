@@ -10,6 +10,11 @@
         text-align: center;
         padding: .3rem 1rem;
     }
+
+    &--sticky {
+        position: sticky;
+        top: 100%;
+    }
 }
 
 .socials {
@@ -25,5 +30,13 @@
 
     &__link:hover {
         color: var(--clr-white-primary);
+    }
+
+    &--blog {
+        padding: 1rem .5rem 0 .5rem;
+    }
+
+    &__link--blog:hover {
+        color: var(--clr-lilac-blog);
     }
 }

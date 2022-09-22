@@ -1,10 +1,14 @@
 :root {
   --clr-black-primary: hsl(0, 0%, 15%);
   --clr-white-primary: hsl(0, 0%, 100%);
+  --clr-neutral-light: hsl(0, 0%, 94%);
+  --clr-neutral-dark: hsl(0, 0%, 47%);
   --clr-lilac-bg: hsl(255, 69%, 90%);
   --clr-lilac-dark: hsl(254, 100%, 89%);
   --clr-lilac-dark-button: hsl(254, 78%, 75%);
   --clr-lilac-dark-blur: hsl(255, 100%, 88%, .9);
+  --clr-lilac-blog: #9d73f2;
+  --clr-lilac-blog-dark: hsl(260, 45%, 47%);
   --clr-green-bg: hsl(151, 74%, 88%);
   --clr-pink-bg: hsl(0, 86%, 89%);
   --clr-pink-dark-button: hsl(0, 73%, 77%);
@@ -27,16 +31,18 @@
 body {
   margin: 0;
   padding: 0;
-  line-height: 1.6;
-  letter-spacing: 0.5px;
+  line-height: 1.7;
+  letter-spacing: 0.3px;
   overflow-x: hidden;
   font-family: var(--public-sans-font);
   color: var(--clr-black-primary);
+  min-height: 100vh;
 }
 
 a,
 .a:visited {
   color: var(--clr-black-primary);
+  cursor: pointer;
 }
 
 img {
@@ -89,22 +95,24 @@ ul {
   line-height: 2.3rem;
   margin-bottom: 2rem;
   font-family: var(--vollkron-font);
-  padding: 0 2.2rem;
+  padding: 0 2.1rem;
 }
 @media (min-width: 37em) {
   .section__title {
     font-size: 3rem;
+    padding: 0.2rem 2.5rem;
   }
 }
 .section__text {
   max-width: 65ch;
-  font-size: 1.1rem;
-  padding: 0.2rem 2.2rem;
+  font-size: 1.2rem;
+  padding: 0.2rem 2.1rem;
   margin: 1rem 0;
 }
 @media (min-width: 37em) {
   .section__text {
     font-size: 1.3rem;
+    padding: 0.2rem 2.5rem;
   }
 }
 .section__list {
@@ -172,7 +180,7 @@ ul {
   letter-spacing: 1px;
   border: 1px solid var(--clr-black-primary);
   background-color: var(--clr-blue-bg);
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 5px;
   font-size: 0.9rem;
   position: relative;
@@ -200,7 +208,7 @@ ul {
   background-color: var(--clr-lilac-bg);
   background-repeat: no-repeat;
   /*PNG from https://icons8.com/*/
-  background-image: url(../../images/cloudsssssssss500.png);
+  background-image: url(../../images/clouds-img.svg);
   background-repeat: repeat-x;
   animation: movement 60s linear infinite;
 }
@@ -724,6 +732,10 @@ textarea:focus {
   text-align: center;
   padding: 0.3rem 1rem;
 }
+.footer--sticky {
+  position: sticky;
+  top: 100%;
+}
 
 .socials {
   text-align: center;
@@ -736,6 +748,102 @@ textarea:focus {
 }
 .socials__link:hover {
   color: var(--clr-white-primary);
+}
+.socials--blog {
+  padding: 1rem 0.5rem 0 0.5rem;
+}
+.socials__link--blog:hover {
+  color: var(--clr-lilac-blog);
+}
+
+.blog-body {
+  background-color: var(--clr-neutral);
+}
+
+.blog {
+  min-height: 100vh;
+  max-width: 62.5rem;
+  background-color: var(--clr-white-primary);
+  margin: 0 auto;
+  box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+.blog__wrapper {
+  max-width: 85%;
+  margin: 0 auto;
+  padding-top: 1rem;
+}
+@media (min-width: 48em) {
+  .blog__wrapper {
+    max-width: 75%;
+  }
+}
+.blog__wrapper--title {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.blog__wrapper--article {
+  text-align: right;
+}
+.blog__wrapper--article > a {
+  padding-right: 1rem;
+}
+.blog__title {
+  padding: 2.5rem 0 0 0;
+  color: var(--clr-lilac-blog);
+}
+.blog__link {
+  color: var(--clr-lilac-blog);
+  text-decoration: underline;
+}
+.blog__link--header {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--clr-lilac-blog);
+  text-decoration-line: underline;
+  text-decoration-thickness: 0.125rem;
+}
+@media (min-width: 37em) {
+  .blog__link--header {
+    font-size: 1.3rem;
+  }
+}
+.blog__link:hover, .blog__link--header:hover {
+  text-decoration: none;
+  color: var(--clr-lilac-blog-dark);
+}
+
+aside {
+  align-items: center;
+}
+
+.avatar {
+  max-width: 65px;
+  padding-right: 0.7rem;
+}
+@media (min-width: 37em) {
+  .avatar {
+    max-width: 85px;
+  }
+}
+
+.article__title {
+  padding: 1rem 0 0 0;
+  line-height: 1.2;
+  font-weight: 500;
+  max-width: 65ch;
+  margin-bottom: 0;
+}
+
+.text {
+  padding: 0;
+  margin-top: 2.5rem;
+}
+.text-small {
+  font-size: 0.9rem;
+  color: var(--clr-neutral-dark);
+  padding: 0;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
