@@ -318,6 +318,7 @@ code {
 
 .full-stop {
   opacity: 65%;
+  color: var(--clr-black-primary);
 }
 
 @keyframes movement {
@@ -788,7 +789,7 @@ textarea:focus {
 .blog__wrapper {
   max-width: 85%;
   margin: 0 auto;
-  padding-top: 1rem;
+  padding-top: 1.5rem;
 }
 @media (min-width: 48em) {
   .blog__wrapper {
