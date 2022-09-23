@@ -1,43 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>article</title>
+    <title>Why and how to start using Devtools</title>
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700&family=Vollkorn:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet"> 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Vollkorn:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
     <!--CSS and JS-->
     <link rel="stylesheet" href="../css/style.css">
     <script src="../js/main.js" defer></script>
     <!--devicons-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <!--browser icon-->
-    <link rel="shortcut icon" type="image/svg" href="images/logo-fav.svg">
+    <link rel="shortcut icon" type="image/svg" href="../articles/../images/logo-fav.svg">
 </head>
+
 <body class="blog-body">
     <div class="blog">
-
+    
         <div class="blog__wrapper blog__wrapper--article">
-             <a class="blog__link--header" href="../blog.html">Articles</a>
-             <a class="blog__link--header" href="../index.html">Home</a>
+            <a class="blog__link--header" href="../blog.html">Articles</a>
+            <a class="blog__link--header" href="../index.html">Home</a>
         </div>
 
-        <div class="blog__wrapper">
+        <article class="blog__wrapper">
             <h1 class="section__title article__title">Why and how to start using Devtools if you are learning CSS</h1>
             <p class="text-small">Sep 22, 2022</p>
             <div class="text section__text">
-                <p class="text__paragraph">If I could give a piece of advice to my former self back when I started learning web development, 
-                    it would be to <strong>start using Devtools from day one</strong>.
-                    In my personal experience, while the first CSS courses I followed online taught me a lot about CSS theory and encouraged me 
-                    to learn through practice, <strong>they didn’t put enough emphasis on the importance of developer tools.</strong> In JavaScript, on the other hand, 
-                    every lesson starts by showing you the console, as it’s crucial to understanding how the language works.
-                    I believe that a good understanding of what happens <strong>behind the scenes</strong> on a webpage is not only useful for<strong> debugging</strong>, 
+                <p class="text__paragraph">If I could give a piece of advice to my former self back when I started
+                    learning web development,
+                    it would be to <strong>start using Devtools from day one</strong>. </p>
+                <p class="text__paragraph">
+                    In my personal experience, while the first CSS courses I followed online taught me a lot about CSS
+                    theory and encouraged me
+                    to learn through practice, <strong>they didn’t put enough emphasis on the importance of developer
+                        tools.</strong>
+                    In JavaScript, on the other hand,
+                    every lesson starts by showing you the console, as it’s crucial to understanding how the language
+                    works. </p>
+                <p class="text__paragraph">
+                    I believe that a good understanding of what happens <strong>behind the scenes</strong> on a webpage
+                    is not only useful for<strong> debugging</strong>,
                     but is also a fundamental step in your journey <strong>to really understand CSS</strong>.</p>
+
+                <p class="text__paragraph">I should start by saying that I really like CSS, but that wasn’t exactly the
+                    feeling I had when I started and
+                    I’ve noticed that the same is true for a lot of developers. </p>
+                <p class="text__paragraph">
+                    This seems to be especially true for people who know other programming languages,
+                    who often get frustrated by the fact that CSS works very differently to other languages.</p>
+                <p class="text__paragraph">
+                    My opinion completely changed once I had a better understanding of CSS. I realized that it is
+                    actually fun and Devtools were a game changer for me.</p>
+
+                <!--section intro-->
+                <h2 class="article__title--section">Accessing the DevTools Window:</h2>
+                <p class="text__paragraph">Every major browser has Devtools. I personally use the ones in both Chrome
+                    and Firefox, because they have different,
+                    interesting features.</p>
+                <p class="text__paragraph">To open up your Devtools, you just need to press <code>F12</code> or
+                    <code>Command+Option+C</code> (Mac), <code>Control+Shift+C</code> (Windows, Linux).
+                    Alternatively, you can right click and choose inspect element. </p>
+
+                <!--section features-->
+                <h2 class="article__title--section">Features:</h2>
+                <p class="text__paragraph">Let’s talk first about my favourite feature:</p>
+                <!--Select Element Tool-->
+                <h2 class="article__title--section">The Select Element Tool</h2>
+                <p class="text__paragraph">For beginners, the select element tool will quickly become your best friend.
+                    This can be accessed by clicking the icon
+                    as shown in the picture.</p>
+                <img class="article__img" src="images/select-element-tool.svg"
+                    alt="accessing the select element tool, the element panel and the styles panel">
+                <img class="article__img" src="images/selecting-element-in-the-webpage 1.svg"
+                    alt="selecting element in the webpage">
+                <p class="text__paragraph">Now you can highlight elements on your webpage to understand how much space
+                    they take (padding, border and margin) and
+                    even change properties and values and see the results in real-time. You’ll finally find out what is
+                    causing that annoying white space!</p>
+                <p class="text__paragraph">Whenever you select an element on the webpage, it will also be highlighted in
+                     the elements panel and will show all the properties being applied in the styles tab.</p>
+
+                <!--Box Model-->     
+                <h2 class="article__title--section">The Box Model visual representation</h2>
+                <p class="text__paragraph">Something I find myself doing very often is experimenting with the visual 
+                    representation of the box model. </p>  
+                <div class="article-container__img">
+                    <img class="article__img" src="images/visual-box-model.svg"
+                    alt="visual representation of the Box Model">
+                </div>
+                <p class="text__paragraph">This tool is located in the computed tab on Chrome while you’ll find it in the Layout 
+                    tab if you are on Firefox.</p>
+                <p class="text__paragraph">It allows you to change the values of padding and margin directly in the browser to see
+                     how they look and, once you are satisfied, you can edit them in the HTML and CSS source code.</p>
+                
+                <!--Flexbox and grid editor tool-->     
+                <h2 class="article__title--section">Flexbox and grid editor tool</h2> 
+                <div class="article-container__img">
+                    <img class="article__img" src="images/Flexbox-and-grid-editor-tool.svg"
+                    alt="Flexbox and grid editor tool">
+                </div>   
+                <p class="text__paragraph">Chances are you are using both flexbox and grid in your design. 
+                    If so, Google Chrome has provided a very cool tool to help edit and debug them.</p> 
+
+                <p class="text__paragraph">You just need to click on the icon next to the display property and a panel 
+                    will pop up. Then you’ll be able to play around with all the flex or grid properties.</p> 
+                <p class="text__paragraph">I remember when I started using flexbox I always got confused with the align and justify properties.
+                     With this tool you just need to click on the icons below the property name, which also offer a visual representation of 
+                     the default behavior, and see what happens in your website without messing with your source code.</p> 
+                
+                <p class="text__paragraph">Another important feature is:</p> 
+                <!--the Responsive Mode-->     
+                <h2 class="article__title--section">The Responsive Mode</h2>
+                <div class="article-container__img">
+                    <img class="article__img article__img--vertical" src="images/responsive-mode.svg"
+                    alt="Flexbox and grid editor tool">
+                </div> 
+                <p class="text__paragraph">Making a responsive website is never easy and can be especially intimidating for a beginner.</p>
+                <p class="text__paragraph">This special mode makes our life easier by showing our website on a list of different devices. 
+                    It also allows us to manually resize the window by dragging the corner on the screen to any size we want.</p>  
+                <p class="text__paragraph">This way it becomes easier to decide where to include breakpoints and all the things we need to modify
+                     on our webpage to make it look good at all sizes. </p>  
+                     
+                <!--conclusions-->     
+                <h2 class="article__title--section">Conclusions</h2>
+                <p class="text__paragraph">Obviously there are many more advanced features and a lot more you can do with the developer tools.
+                     These are just the ones that have massively helped me have a better understanding of CSS and that I recommend to everyone who is learning it. 
+                    I also hope they will make you appreciate CSS a bit more.</p>     
             </div>
-        </div>
+        </article>
 
 
         <footer class="footer--sticky">

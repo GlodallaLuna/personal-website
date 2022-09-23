@@ -7,6 +7,10 @@
     &--contact {
         text-align: end;
     }
+
+    &--article {
+        margin-top: 1.5rem;
+    }
 }
 
 .button {
@@ -25,19 +29,28 @@
         background-color: var(--clr-lilac-dark);
     }
 
+
     &--contact {
         color: var(--clr-black-primary);
         background-color: var(--clr-pink-bg);
         padding: .5rem 2rem;
     }
+
+    &--article {
+        background-color: var(--clr-lilac-blog);
+        color: var(--clr-white-primary);
+        margin: 0;
+    }
+
+
 }
 
 .button--about:hover,
 .button--contact:hover,
-.button--projects:hover {
+.button--projects:hover,
+.button--article:hover {
     color: var(--clr-white-primary);
     transform: scale(1.05) translateY(-.125em);
-    
 }
 
 .button--about:hover {
@@ -46,6 +59,10 @@
 
 .button--contact:hover {
     background-color: var(--clr-pink-dark-button);
+}
+
+.button--article:hover {
+    background-color: var(--clr-lilac-blog-dark);
 }
 
 
