@@ -1,0 +1,150 @@
+@use '../util' as u;
+@use '../globals' as g;
+
+.blog-body {
+    background-color: var(--clr-neutral-light);
+    
+}
+
+.blog {
+    min-height: 100vh;
+    max-width: 62.5rem;
+    background-color: var(--clr-white-primary);
+    margin: 0 auto;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+
+    &__wrapper {
+        max-width: 85%;
+        margin: 0 auto;
+        padding-top: 1.5rem;
+
+        @include u.breakpoint(large) {
+            max-width: 75%;
+        }
+
+        &--title {
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        &--article {
+            text-align: right;
+        }
+
+        &--article>a {
+            padding-right: 1rem;
+        }
+    }
+
+    &__title {
+        padding: 2.5rem 0 0 0;
+        color: var(--clr-lilac-blog);
+        
+    }
+
+    &__link {
+        color: var(--clr-lilac-blog);
+        text-decoration: underline;
+    }
+
+    &__link--header {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--clr-lilac-blog);
+        text-decoration-line: underline;
+        text-decoration-thickness: .125rem;
+
+        @include u.breakpoint(medium) {
+            font-size: 1.3rem;
+        }
+        
+    }
+
+    &__link:hover,
+    &__link--header:hover {
+        text-decoration: none;
+        color: var(--clr-lilac-blog-dark);
+    }
+
+    
+}
+
+aside {
+    align-items: center;
+}
+
+.avatar {
+    max-width: 65px;
+    padding-right: .7rem;
+
+    @include u.breakpoint(medium) {
+        max-width: 75px;
+    }
+}
+
+
+
+
+.article {
+    &__title {
+        padding: 1rem 0 0 0;
+        line-height: 1.2;
+        font-weight: 500;
+        max-width: 65ch;
+        margin-bottom: 0;
+    }
+
+    &__title--section {
+        margin-top: 2.5rem;
+        font-size: 1.8rem;
+        line-height: 1.3;
+
+        @include u.breakpoint(medium) {
+            font-size: 2rem;
+        }
+    }
+
+    &-container__img {
+       display: grid;
+       justify-content: left;
+    }
+
+    &__img {
+        margin-top: 1.5rem;
+        max-height: 20rem;
+    }
+
+    &__img--vertical {
+        max-height: 35rem;
+    }
+
+    &-snippet {
+        margin-top: 2rem;
+    }
+
+
+
+}
+
+.text {
+    padding: 0;
+    margin-top: 2.5rem;
+    border-bottom: 1px solid var(--clr-neutral-medium);
+    padding-bottom: 2.5rem;
+    
+
+    &-small {
+        font-size: .9rem;
+        color: var(--clr-neutral-dark);
+        padding: 0;
+        font-weight: 700;
+    }
+
+    &__paragraph {
+        margin-top: .9rem;
+    }
+}
+
+
+

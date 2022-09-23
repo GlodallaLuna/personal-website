@@ -9,7 +9,7 @@
     background-color:var( --clr-lilac-bg);
     background-repeat:no-repeat;
     /*PNG from https://icons8.com/*/
-    background-image:url(../../images/cloudsssssssss500.png);
+    background-image:url(../../images/clouds-img.svg);
     background-repeat:repeat-x;
     animation: movement 60s linear infinite; 
 
@@ -21,7 +21,7 @@
         line-height: 1.2 ;
         padding: 0 15px 0 15px;
 
-        @include u.breakpoint(medium) {
+        @include u.breakpoint(large) {
             font-size: 4rem;
         }
 
@@ -35,7 +35,7 @@
             font-weight: 600;
             font-size: 2.7rem;
             
-            @include u.breakpoint(medium) {
+            @include u.breakpoint(large) {
                 font-size: 4.2rem;
             }
 
@@ -107,6 +107,7 @@
 
 .full-stop {
     opacity: 65%;
+    color: var(--clr-black-primary);
 }
 
 
@@ -125,12 +126,13 @@
     inset: 20% 0 0 29%;
     margin-top: -30px;
     margin-left: -100px;
-    color:var(--clr-black-primary);
     padding:1.3rem;
-
+    color:var(--clr-black-primary);
+    
     @include u.breakpoint(xlarge) {
         inset: 22% 0 0 30%;
     }
+
 }
 
 

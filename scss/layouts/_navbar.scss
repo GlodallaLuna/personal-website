@@ -21,7 +21,7 @@
     background-color: var(--clr-lilac-dark-blur);
     position: fixed;
 
-    @include u.breakpoint-down(small) {
+    @include u.breakpoint-down(medium) {
         padding: 2.1rem 3rem;
         
     }
@@ -33,7 +33,7 @@
     
     
 
-    @include u.breakpoint-down(small) {
+    @include u.breakpoint-down(medium) {
         z-index: 1000;
         position: fixed;
         inset: 0 0 0 30%;
@@ -50,7 +50,7 @@
 
 
 .primary-nav[data-visible="true"] {
-    @include u.breakpoint-down(small) {
+    @include u.breakpoint-down(medium) {
         transform: translateX(0%);
         transition: transform 120ms ease-out;
     }
@@ -90,7 +90,7 @@
 
 .mobile-nav-toggle {
     
-    @include u.breakpoint-down(small) {
+    @include u.breakpoint-down(medium) {
         display: block;
         position: fixed;
         z-index: 9999;
@@ -109,5 +109,10 @@
     @include u.breakpoint-down(small) {
         background-image: url(../../images/icons8-black-close32.svg); 
     } 
+}
+
+.external {
+    text-transform: uppercase;
+    font-family: 'Asap Condensed', sans-serif;
 }
 
