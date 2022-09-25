@@ -7,7 +7,7 @@
   --clr-lilac-bg: hsl(255, 69%, 90%);
   --clr-lilac-dark: hsl(254, 100%, 89%);
   --clr-lilac-dark-button: hsl(254, 78%, 75%);
-  --clr-lilac-dark-blur: hsl(255, 100%, 88%, .9);
+  --clr-lilac-dark-blur: hsla(255, 100%, 88%, 0.9);
   --clr-lilac-blog: hsl(251, 83%, 70%);
   --clr-lilac-blog-dark: hsl(260, 45%, 47%);
   --clr-green-bg: hsl(151, 74%, 88%);
@@ -893,6 +893,60 @@ aside {
 }
 .text__paragraph {
   margin-top: 0.9rem;
+}
+
+.error-body {
+  width: 100%;
+}
+@media (min-width: 87.5em) {
+  .error-body {
+    display: grid;
+    align-content: center;
+  }
+}
+
+.error {
+  max-width: 30rem;
+  margin: 0 auto;
+}
+@media (min-width: 87.5em) {
+  .error {
+    max-width: 100%;
+    grid-template-columns: 1fr 1fr;
+    justify-self: center;
+    align-items: center;
+  }
+}
+.error-container {
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 87.5em) {
+  .error-container {
+    padding-left: 1rem;
+    align-items: start;
+  }
+}
+.error__paragraph {
+  padding: 0;
+  margin-bottom: 1rem;
+  font-family: var(--vollkron-font);
+}
+.error__span {
+  color: var(--clr-lilac-blog);
+}
+.error__paragraph:nth-child(2) {
+  font-size: 2rem;
+  max-width: 15ch;
+  margin: 0 auto;
+}
+@media (min-width: 87.5em) {
+  .error__paragraph:nth-child(2) {
+    margin: 0;
+    font-size: 2.2rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
