@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why and how to start using Devtools</title>
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,700;1,400&family=Vollkorn:ital,wght@0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <!--CSS and JS-->
+    <link rel="stylesheet" href="/blog/prism/prism.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js" defer></script>
+    <!--devicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!--browser icon-->
+    <link rel="shortcut icon" type="image/svg" href="/images/logo-fav.svg">
+</head>
+
+<body class="blog-body">
+    <div class="blog">
+    
+        <div class="blog__wrapper blog__wrapper--article">
+            <a class="blog__link--header" href="/blog">Articles</a>
+            <a class="blog__link--header" href="/">Home</a>
+        </div>
+
+        <article class="blog__wrapper">
+            <h1 class="section__title article__title">Shallow Copy VS Deep Copy</h1>
+            <p class="text-small">Nov 23, 2022</p>
+            <div class="text section__text">
+                <p class="text__paragraph">Recently someone asked me some questions about JavaScript objects, which made me realize
+                     that I didn’t deeply understand some of the core concepts of this fundamental JavaScript topic.</p>
+                <p class="text__paragraph">Since <strong>nearly everything in JavaScript is an object</strong> except for the primitives
+                     (boolean, null, undefined, string, number and symbol), we can say that objects are the foundation of JavaScript and
+                      permeate its every aspect. </p>  
+                <p class="text__paragraph">A key concept to understand is that unlike primitives data types, <strong>objects are mutable</strong>, 
+                    this means that they can be modified after their declaration. However, it’s not good to work in a mutable fashion.</p>
+                <p class="text__paragraph">The main benefits of immutability are predictability and performance: it’s easier to debug code that 
+                    doesn’t hide changes and it’s also easy to see if anything has changed at all. </p> 
+                <p class="text__paragraph">With regard to performance, immutable Objects can make use of structural sharing to reduce memory usage.</p>  
+                <!--difference between shallow and deep-->
+                <h2 class="article__title--section">So now you might wonder: okay, but what is the difference between a shallow copy and a deep copy? </h2>
+                <p class="text__paragraph"><strong>A shallow copy actually doesn’t make a new copy of the object in memory.</strong> It only copies a reference to
+                     the original object.</p>
+                <p class="text__paragraph">This means that if we add or change the values in the new object, we are actually going to mutate the source object. </p>
+                <p class="text__paragraph"><strong>A deep copy on the other hand is a way to make a brand new object</strong> that is disentangled from the original one.</p>
+                <!--shallow copy-->
+                <h2 class="article__title--section">Shallow Copy</h2>
+                <p class="text__paragraph">Let’s consider some practical examples:</p>
+                <pre><code class="language-js" >let cat = { 
+    name: 'Oli',
+    color: 'Black'
+};
+let copyCat = cat;</code></pre>
+                <p class="text__paragraph">In the code above we are using the assignment operator to make a new object called copyCat. As explained, however, 
+                    we are only making a reference to the cat object.</p>
+                <p class="text__paragraph">Let’s see what happens if we change the value of color in copyCat from black to red:</p>  
+                <pre><code class="language-js">copyCat.color = "Red";
+console.log(cat)  
+// output: {"name":"Oli","color":"Red"}</code></pre>
+                <p class="text__paragraph">The original cat object color mutated and the output says it is red now.</p> 
+                
+                <!--other shallow examples-->
+                <h2 class="article__title--section">Other examples of shallow copy: <br>
+                    Spread Operator and Object.assign()</h2>
+                <p class="text__paragraph">Consider the following snippet:</p> 
+                <pre><code class="language-js">let cat = {
+    name: 'Oli',
+    color: 'Black',
+    passions: {
+        food: "salmon",
+        activity: "sleeping",
+        place: "garden"
+    }
+};</code></pre>
+               <p class="text__paragraph">The first method I want to show you is the <strong>spread operator</strong>:</p>
+               <pre><code class="language-js">let copyCat = {...cat}
+copyCat.name = "Silvester"
+copyCat.passions.food = "carrots"
+                
+console.log(cat)
+//output: {"name":"Oli","color":"Black","passions"{"food":"carrots","activity":"sleeping","place":"garden"}} </code></pre>
+               <p class="text__paragraph">This time we changed the name value and also the food value inside the nested object.</p>
+               <p class="text__paragraph">As you can see, when we tried to print the original cat object, only the value “carrots”
+                 inside the nested object mutated, while our cat name is still Oli.</p>
+               <p class="text__paragraph">This happens because the spread operator make a new copy of the all the  key-value pairs,
+                 but it only creates a reference to the nested object. </p>
+               
+               <p class="text__paragraph">The second method is <strong>Object.assign()</strong>:</p>
+               <pre><code class="language-js">let copyCat = Object.assign({}, cat)</code></pre>
+               <p class="text__paragraph">If we replace the spread operator with the line of code above, the output gives us
+                 the exact same result we got spreading the object.</p>
+
+              <div class="blog__note">
+               <p class="text__paragraph">Disclaimer: there are some differences between these two methods, but I chose to not talk 
+                about them here to keep the explanation simple. If you are interested in learning about the differences you 
+                can visit <a class="blog__link" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#spread_in_object_literals" 
+                target="_blank">this link to the MDN documentation</a></p> 
+              </div> 
+
+              <!--Json methods for deep copy-->
+              <h2 class="article__title--section">Deep copy using JSON methods</h2>
+              <p class="text__paragraph">Creating a deep copy can be trickier than creating shallow copies.</p>
+              <p class="text__paragraph">One of the easiest way is to use <strong>JSON.stringify()</strong> to convert the object to a JSON string,
+                and then <strong>JSON.parse()</strong> to convert the string back into a completely new JavaScript object like in the following example:</p>
+              <pre><code class="language-js">let cat = {
+name: 'Oli',
+color: 'Black',
+passions: {
+    food: "salmon",
+    activity: "sleeping",
+    place: "garden"
+    }
+};
+
+let copyCat = JSON.parse(JSON.stringify(cat));
+copyCat.passions.food = "carrots"
+
+console.log(cat)
+//output: {"name":"Oli","color":"Black","passions"{"food":"salmon","activity":"sleeping","place":"garden"}}</code></pre>
+
+              <p class="text__paragraph">Our old cat still likes salmon. The original nested object is unchanged as well as all the other values.</p>
+              <p class="text__paragraph">This works because in order to create the Json string, the stringify method goes through all the properties 
+                and also the nested objects.</p>
+              <p class="text__paragraph">However you should keep in mind that this method only work with simple objects 
+                <a class="blog__link" href="https://developer.mozilla.org/en-US/docs/Glossary/Serialization" target="_blank">(Serializable objects)</a>.</p>
+              <p class="text__paragraph">If an objects contains functions, properties with undefined values, Symbols and many other cases these Json
+                 methos cannot be applied. </p>
+              
+              <!--Conclusions-->
+              <h2 class="article__title--section">Conclusions</h2>
+              <p class="text__paragraph">In this article I explained some of the methods to make copies of an object and the reasons why it might
+                 be a good idea to use deep copies over shallow copies to preserve the concept of immutability in your code.</p>
+              <p class="text__paragraph">Nonetheless we saw how some methods in the shallow copy category actually work really well at making 
+                a new copy and not references when our source object doesn’t contain any other nested object. Therefore I suggest you assess which 
+                method is best suited for your needs.</p>
+            </div>
+        </article>
+
+
+        <footer class="footer--sticky">
+            <div class="socials socials--blog">
+                <a class="socials__link socials__link--blog" href="https://github.com/GlodallaLuna" alt="GitHub icon"
+                    target="_blank"><i class="devicon-github-original"></i></a>
+                <a class="socials__link socials__link--blog"
+                    href="https://twitter.com/GlodallaLuna?t=89U-6GyNaA88pEt9zawbsA&s=35" alt="twitter icon"
+                    target="_blank"><i class="devicon-twitter-original"></i></a>
+                <a class="socials__link socials__link--blog"
+                    href="https://www.linkedin.com/in/gloria-mancini-b1471b246/" alt="LinkedIn icon" target="_blank"><i
+                        class="devicon-linkedin-plain"></i></a>
+            </div>
+
+            <p class="footer__text">&copy; 2022 Designed & Built by Gloria Mancini</p>
+        </footer>
+    </div>
+    <script src="/blog/prism/prism.js"></script>
+</body>
+
+</html>

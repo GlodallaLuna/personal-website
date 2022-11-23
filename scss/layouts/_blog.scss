@@ -66,7 +66,17 @@
         text-decoration: none;
         color: var(--clr-lilac-blog-dark);
     }
+ 
+    &__note {
+        background-color: var(--clr-note);
+        padding: .5rem;
+        margin-top: .5rem;
+        
+    }
 
+    &__note>.text__paragraph {
+        margin-top: 0;
+    }
     
 }
 
@@ -93,6 +103,7 @@ aside {
         font-weight: 500;
         max-width: 65ch;
         margin-bottom: 0;
+        
     }
 
     &__title--section {
@@ -145,6 +156,8 @@ aside {
         margin-top: .9rem;
     }
 }
+
+
 
 
 

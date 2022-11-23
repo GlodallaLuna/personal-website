@@ -16,6 +16,7 @@
   --clr-blue-bg: hsl(215, 94%, 86%);
   --clr-blue-dark: hsl(215, 68%, 41%);
   --clr: rgb(235, 240, 245);
+  --clr-note: #fff9d7;
 }
 
 :root {
@@ -831,6 +832,14 @@ textarea:focus {
 .blog__link:hover, .blog__link--header:hover {
   text-decoration: none;
   color: var(--clr-lilac-blog-dark);
+}
+.blog__note {
+  background-color: var(--clr-note);
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+}
+.blog__note > .text__paragraph {
+  margin-top: 0;
 }
 
 aside {
