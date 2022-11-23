@@ -34,16 +34,18 @@
             <h1 class="section__title article__title">Shallow Copy VS Deep Copy</h1>
             <p class="text-small">Nov 23, 2022</p>
             <div class="text section__text">
-                <p class="text__paragraph">Recently someone asked me some questions about JavaScript objects, which made me realize
-                     that I didn’t deeply understand some of the core concepts of this fundamental JavaScript topic.</p>
-                <p class="text__paragraph">Since <strong>nearly everything in JavaScript is an object</strong> except for the primitives
-                     (boolean, null, undefined, string, number and symbol), we can say that objects are the foundation of JavaScript and
-                      permeate its every aspect. </p>  
-                <p class="text__paragraph">A key concept to understand is that unlike primitives data types, <strong>objects are mutable</strong>, 
-                    this means that they can be modified after their declaration. However, it’s not good to work in a mutable fashion.</p>
-                <p class="text__paragraph">The main benefits of immutability are predictability and performance: it’s easier to debug code that 
-                    doesn’t hide changes and it’s also easy to see if anything has changed at all. </p> 
-                <p class="text__paragraph">With regard to performance, immutable Objects can make use of structural sharing to reduce memory usage.</p>  
+                <p class="text__paragraph">Recently I was asked about copying JavaScript objects. It made me realize I didn't deeply 
+                    understand some of the core concepts of this fundamental JavaScript topic.</p>
+                <p class="text__paragraph">Since <strong>nearly everything in JavaScript is an object</strong> except for the primitives (boolean, 
+                    null, undefined, string, number and symbol), we can say that objects are the foundation of JavaScript and permeate its every aspect. </p>  
+                <p class="text__paragraph"><strong>Although copying seems straightforward, a lot of things can go wrong if you use a naive approach. </strong>
+                    In fact there are two different ways, known as shallow copy and deep copy.</p>
+                <p class="text__paragraph">I want to discuss them in this article but before starting, a key concept to understand is mutability. </p> 
+                <p class="text__paragraph">Unlike primitives data types, <strong>objects are mutable</strong>, this means that they can be modified after their declaration.
+                     However, it’s not good to work in a mutable fashion.</p> 
+                <p class="text__paragraph">The main benefits of immutability are predictability and performance: it’s easier to debug code that doesn’t hide
+                     changes and it’s also easy to see if anything has changed at all.</p> 
+                <p class="text__paragraph">With regard to performance, immutable Objects can make use of structural sharing to reduce memory usage. </p>     
                 <!--difference between shallow and deep-->
                 <h2 class="article__title--section">So now you might wonder: okay, but what is the difference between a shallow copy and a deep copy? </h2>
                 <p class="text__paragraph"><strong>A shallow copy actually doesn’t make a new copy of the object in memory.</strong> It only copies a reference to
@@ -89,7 +91,7 @@ console.log(cat)
                <p class="text__paragraph">This time we changed the name value and also the food value inside the nested object.</p>
                <p class="text__paragraph">As you can see, when we tried to print the original cat object, only the value “carrots”
                  inside the nested object mutated, while our cat name is still Oli.</p>
-               <p class="text__paragraph">This happens because the spread operator make a new copy of the all the  key-value pairs,
+               <p class="text__paragraph">This happens because the spread operator makes a new copy of the all the  key-value pairs,
                  but it only creates a reference to the nested object. </p>
                
                <p class="text__paragraph">The second method is <strong>Object.assign()</strong>:</p>
@@ -132,6 +134,11 @@ console.log(cat)
                 <a class="blog__link" href="https://developer.mozilla.org/en-US/docs/Glossary/Serialization" target="_blank">(Serializable objects)</a>.</p>
               <p class="text__paragraph">If an objects contains functions, properties with undefined values, Symbols and many other cases these Json
                  methos cannot be applied. </p>
+              <p class="text__paragraph">For this reason is worth mentioning that this is not the most perfomant way to make a deep copy.</p>
+              <p class="text__paragraph"><strong>For complex objects, it may be a better idea to make a custom function</strong> that iterate through the different 
+                components within and apply different methods to each component depending on what type of thing it is. </p>
+              <p class="text__paragraph">This helps break the problem down into smaller tasks, rather than trying to copy the entire thing at once.</p>
+              
               
               <!--Conclusions-->
               <h2 class="article__title--section">Conclusions</h2>
