@@ -44,15 +44,13 @@
                 <h1 class="section__title article__title">Shallow Copy VS Deep Copy</h1>
                 <p class="text-small">Nov 23, 2022</p>
                 <div class="text section__text">
-                    <p class="text__paragraph">Recently someone asked me some questions about JavaScript objects, which made me realize
-                        that I didn’t deeply understand some of the core concepts of this fundamental JavaScript topic.</p>
-                    <p class="text__paragraph">Since <strong>nearly everything in JavaScript is an object</strong> except for the primitives
-                        (boolean, null, undefined, string, number and symbol), we can say that objects are the foundation of JavaScript and
-                        permeate its every aspect. </p>
-                    <p class="text__paragraph">A key concept to understand is that unlike primitives data types, <strong>objects are mutable</strong>, 
-                        this means that they can be modified after their declaration. However, it’s not good to work in a mutable fashion.</p>
-                    <p class="text__paragraph">The main benefits of immutability are predictability and performance: it’s easier to debug code that 
-                        doesn’t hide changes and it’s also easy to see if anything has changed at all. </p>    
+                    <p class="text__paragraph">Recently I was asked about copying JavaScript objects. It made me realize I didn't deeply 
+                        understand some of the core concepts of this fundamental JavaScript topic.</p>
+                    <p class="text__paragraph">Since <strong>nearly everything in JavaScript is an object</strong> except for the primitives (boolean, 
+                        null, undefined, string, number and symbol), we can say that objects are the foundation of JavaScript and permeate its every aspect. </p>  
+                    <p class="text__paragraph"><strong>Although copying seems straightforward, a lot of things can go wrong if you use a naive approach. </strong>
+                        In fact there are two different ways, known as shallow copy and deep copy.</p>
+                    <p class="text__paragraph">I want to discuss them in this article but before starting, a key concept to understand is mutability. </p>    
 
                     <div class="button-container--article"><a href="shallow-copy-vs-deep-copy/"><button class="button button--article" >Read More</button></a></div>
                 </div>    
