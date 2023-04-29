@@ -39,6 +39,14 @@
         list-style: circle;
     }
 
+    &__link {
+        color: var(--clr-lilac-blog-dark);
+    }
+
+    &__link:hover {
+        text-decoration: underline;
+    }
+
     
     }
 

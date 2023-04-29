@@ -125,6 +125,12 @@ code {
 .section__list {
   list-style: circle;
 }
+.section__link {
+  color: var(--clr-lilac-blog-dark);
+}
+.section__link:hover {
+  text-decoration: underline;
+}
 
 .button-container {
   margin: 2.5rem 1rem;
