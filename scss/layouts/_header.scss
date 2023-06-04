@@ -20,6 +20,8 @@
         font-weight: 400;
         line-height: 1.2 ;
         padding: 0 15px 0 15px;
+        max-width: 60rem;
+        margin: 0 auto;
 
         @include u.breakpoint(large) {
             font-size: 4rem;
@@ -45,9 +47,10 @@
         }
 
     &__paragraph {
-        margin-top: 10px;
-        padding: 0 15px 0 15px;
+        padding: 10px 15px 0 15px;
         font-size: 1.1rem;
+        max-width: 60rem;
+        margin: 0 auto;
 
         @include u.breakpoint(medium) {
             font-size: 1.3rem;
@@ -123,14 +126,15 @@
 
 .centered {
     position: absolute;
-    inset: 20% 0 0 29%;
-    margin-top: -30px;
-    margin-left: -100px;
+    //inset: 20% 0 0 29%;
     padding:1.3rem;
     color:var(--clr-black-primary);
+    width: 100vw;
+    left: 0!important;
+    right: 0;
     
     @include u.breakpoint(xlarge) {
-        inset: 22% 0 0 30%;
+        top: 18%;
     }
 
 }
