@@ -347,6 +347,7 @@ code {
   width: 100vw;
   left: 0 !important;
   right: 0;
+  top: 20%;
 }
 @media (min-width: 87.5em) {
   .centered {

@@ -132,6 +132,7 @@
     width: 100vw;
     left: 0!important;
     right: 0;
+    top: 20%;
     
     @include u.breakpoint(xlarge) {
         top: 18%;
